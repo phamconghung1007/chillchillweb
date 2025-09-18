@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset CSS cơ bản và màu nền chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #24252A;
+    font-family: 'Roboto', sans-serif;
+    color: #edf0f1;
+}
+
+li, a, button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+/* Ẩn link "Skip to main content" và chỉ hiện khi focus */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: auto;
+    display: block;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Định dạng header - GIỮ NGUYÊN */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #1a1b1e;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar ul li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-bar ul li a:hover {
+    color: #0088a9;
+}
+
+.cta button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cta button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* ---------------------------------- */
+/* Căn giữa nội dung và font chữ */
+/* ---------------------------------- */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+    color: #ccc;
+    margin-left: 20px; /* Thụt lề trái cho tất cả các thẻ p */
+}
+
+/* ---------------------------------- */
+/* Thụt lề cho nội dung và ảnh */
+/* ---------------------------------- */
+.intro p,
+.features p,
+.gallery p,
+.breeds-list p,
+.care-tips p {
+    margin-left: 20px;
+}
+
+.cat-grid,
+.cat-flex {
+    margin-left: 20px; /* Thụt lề trái cho cả container chứa ảnh */
+}
+
+/* ---------------------------------- */
+/* PHẦN NTH-CHILD */
+/* ---------------------------------- */
+.cat-grid figure:nth-child(odd) img {
+    border: 5px solid #0088a9;
+    border-radius: 50px 0 50px 0;
+}
+
+.cat-grid figure:nth-child(even) img {
+    border: 5px solid #ff9900;
+    border-radius: 0 50px 0 50px;
+}
+
+.cat-flex figure:nth-child(odd) img {
+    border: 5px solid #0088a9;
+    border-radius: 50px 0 50px 0;
+}
+
+.cat-flex figure:nth-child(even) img {
+    border: 5px solid #ff9900;
+    border-radius: 0 50px 0 50px;
+}
+
+/* ---------------------------------- */
+/* PHẦN FOOTER */
+/* ---------------------------------- */
+footer {
+    background-color: #1a1b1e;
+    padding: 20px;
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 50px;
+}
